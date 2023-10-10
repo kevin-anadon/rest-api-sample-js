@@ -20,11 +20,24 @@ Application routes are:
 http://localhost:8080/reserve?name=Pepe&book=It
 ```
 
+Displays: 
+```json
+{
+  "message": "Hello Pepe, It book is now reserved for you."
+}
+```
+
 - `/author`
 ```
 http://localhost:8080/author?book=Mummy
 ```
 
+Displays: 
+```json
+{
+  "author": "Jhon Doe"
+}
+```
 
 ## Repository Structure
 
