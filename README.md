@@ -65,6 +65,144 @@ En caso de error:
 }
 ```
 
+### Available Books
+```
+.
+├── source/                     # Source code
+│   ├── database/books.json     # Books databse
+```
+```json
+[
+    {
+        "name": "Cien años de soledad",
+        "author": "Gabriel García Márquez",
+        "genre": ["Ficción", "Realismo mágico"],
+        "reserved": true
+    },
+    {
+        "name": "El amor en los tiempos del cólera",
+        "author": "Gabriel García Márquez",
+        "genre": ["Ficción", "Romance"],
+        "reserved": true
+    },
+    {
+        "name": "Rayuela",
+        "author": "Julio Cortázar",
+        "genre": ["Ficción", "Experimental"],
+        "reserved": false
+    },
+    {
+        "name": "Don Quijote de la Mancha",
+        "author": "Miguel de Cervantes",
+        "genre": ["Clásico", "Aventuras"],
+        "reserved": true
+    },
+    {
+        "name": "La sombra del viento",
+        "author": "Carlos Ruiz Zafón",
+        "genre": ["Ficción", "Misterio"],
+        "reserved": true
+    },
+    {
+        "name": "Pedro Páramo",
+        "author": "Juan Rulfo",
+        "genre": ["Ficción", "Realismo mágico"],
+        "reserved": true
+    },
+    {
+        "name": "La casa de los espíritus",
+        "author": "Isabel Allende",
+        "genre": ["Ficción", "Realismo mágico"],
+        "reserved": false
+    },
+    {
+        "name": "Ficciones",
+        "author": "Jorge Luis Borges",
+        "genre": ["Ficción", "Cuentos"],
+        "reserved": true
+    },
+    {
+        "name": "Los detectives salvajes",
+        "author": "Roberto Bolaño",
+        "genre": ["Ficción", "Novela"],
+        "reserved": true
+    },
+    {
+        "name": "La guerra y la paz",
+        "author": "León Tolstói",
+        "genre": ["Clásico", "Historia"],
+        "reserved": false
+    },
+    {
+        "name": "Crimen y castigo",
+        "author": "Fyodor Dostoevsky",
+        "genre": ["Clásico", "Suspense"],
+        "reserved": true
+    },
+    {
+        "name": "El amor en los tiempos del cólera",
+        "author": "Gabriel García Márquez",
+        "genre": ["Ficción", "Romance"],
+        "reserved": true
+    },
+    {
+        "name": "Ficciones",
+        "author": "Jorge Luis Borges",
+        "genre": ["Ficción", "Cuentos"],
+        "reserved": true
+    },
+    {
+        "name": "Los detectives salvajes",
+        "author": "Roberto Bolaño",
+        "genre": ["Ficción", "Novela"],
+        "reserved": false
+    },
+    {
+        "name": "La guerra y la paz",
+        "author": "León Tolstói",
+        "genre": ["Clásico", "Historia"],
+        "reserved": false
+    },
+    {
+        "name": "Crimen y castigo",
+        "author": "Fyodor Dostoevsky",
+        "genre": ["Clásico", "Suspense"],
+        "reserved": false
+    },
+    {
+        "name": "Cien años de soledad",
+        "author": "Gabriel García Márquez",
+        "genre": ["Ficción", "Realismo mágico"],
+        "reserved": true
+    },
+    {
+        "name": "El amor en los tiempos del cólera",
+        "author": "Gabriel García Márquez",
+        "genre": ["Ficción", "Romance"],
+        "reserved": true
+    },
+    {
+        "name": "Rayuela",
+        "author": "Julio Cortázar",
+        "genre": ["Ficción", "Experimental"],
+        "reserved": false
+    },
+    {
+        "name": "Don Quijote de la Mancha",
+        "author": "Miguel de Cervantes",
+        "genre": ["Clásico", "Aventuras"],
+        "reserved": true
+    },
+    {
+        "name": "La sombra del viento",
+        "author": "Carlos Ruiz Zafón",
+        "genre": ["Ficción", "Misterio"],
+        "reserved": false
+    }
+]
+```
+
+
 ## Repository Structure
 
 The repository is structured as follows:
@@ -74,6 +212,7 @@ The repository is structured as follows:
 ├── assets/                     # Development assets
 ├── images/                     # Images used in the present document
 ├── source/                     # Source code
+│   ├── database/               # Books databse    
 │   ├── controllers/            # Application behavior    
 │   ├── models/                 # Model definition 
 │   └── routes/                 # Route definition
