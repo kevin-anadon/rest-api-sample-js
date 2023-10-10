@@ -10,32 +10,58 @@
 Application routes are:
 
 - `/`. Landing page.
-- `/reserve?name=NAME&book=BOOK_NAME`. Displays "Hello *NAME*, *BOOK* book is now reserved for you. ".
-- `/author?book=BOOK_NAME`. Displays book author. (Always the same for ease of use)
+- `/reserve?name=NAME&book=BOOK_NAME`. Displays reserve status.
+- `/author?book=BOOK_NAME`. Displays book author.
+- `/book?book=BOOK_NAME`. Displays book info.
 
 ## Examples
 
 - `/reserve`
 ```
-http://localhost:8080/reserve?name=Pepe&book=It
+http://localhost:8080/reserve?book=Ficciones
 ```
 
 Displays: 
 ```json
 {
-  "message": "Hello Pepe, It book is now reserved for you."
+  "reserved": true
 }
 ```
 
 - `/author`
 ```
-http://localhost:8080/author?book=Mummy
+http://localhost:8080/author?book=Ficciones
 ```
 
 Displays: 
 ```json
 {
-  "author": "Jhon Doe"
+  "author": "Jorge Luis Borges"
+}
+```
+
+- `/book`
+```
+http://localhost:8080/book?book=Ficciones
+```
+
+Displays: 
+```json
+{
+  "name": "Ficciones",
+    "author": "Jorge Luis Borges",
+    "genre": [
+        "Ficción",
+        "Cuentos"
+    ],
+    "reserved": true
+}
+```
+
+En caso de error: 
+```json
+{
+    "error": "Book not found"
 }
 ```
 
