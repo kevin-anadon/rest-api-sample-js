@@ -12,8 +12,9 @@ class Server {
 
         //Server paths
         this.reserve    = "/reserve";        
-        this.authorPath = "/author";        // Contact Info
-        this.indexPath  = "/";              // Index Page
+        this.authorPath = "/author";        
+        this.bookPath = "/book";        
+        this.indexPath  = "/";              
         
         //Load middlewares & routes
         this.middlewares();
@@ -29,6 +30,7 @@ class Server {
 
     routes() {
         this.app.use(this.authorPath, require("../routes/author.routes"));
+        this.app.use(this.bookPath, require("../routes/book.routes"));
         this.app.use(this.reserve, require("../routes/reserve.routes"));
         this.app.use(this.indexPath, require("../routes/index.routes"));
     }

@@ -1,8 +1,6 @@
 const { request, response } = require("express");
 
-//Get index page
 const get_index = async (req = request, res = response) => {
-    // Send request
     try {
         let msg = "Welcome to the index page!! \nThis is API Sample JS app.";
 

@@ -13,22 +13,17 @@
     {
       "url": "http://localhost:8080",
       "description": "Local Server"
+    },
+    {
+      "url": "https://isoler-desem-api.11ibh4wwvyt2.us-south.codeengine.appdomain.cloud",
+      "description": "IBM Code Engine Deployment"
     }
   ],
   "paths": {
     "/reserve": {
       "get": {
-        "description": "Get name and book to reserve",
+        "description": "Get reserve status",
         "parameters": [
-          {
-          "name": "name",
-          "in": "query",
-          "description": "Name of the person who is reserving",
-          "required": true,
-          "schema": {
-            "type": "string"
-          }
-          },
           {
             "name": "book",
             "in": "query",
@@ -48,6 +43,81 @@
                   "type": "object",
                   "properties": {
                     "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/book": {
+      "get": {
+        "description": "Get book information",
+        "parameters": [
+          {
+            "name": "book",
+            "in": "query",
+            "description": "Name of the book to search",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "author": {
+                      "type": "string"
+                    },
+                    "genre": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "reserved": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
                       "type": "string"
                     }
                   }
@@ -79,6 +149,21 @@
                   "type": "object",
                   "properties": {
                     "author": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
                       "type": "string"
                     }
                   }

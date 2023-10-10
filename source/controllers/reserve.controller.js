@@ -1,13 +1,14 @@
 const { request, response } = require("express");
+const books = require("../database/books.json");
 
-// Displays "$HELLO_MSG $HELLO_TARGET"
 const get_msg = async (req = request, res = response) => {
-    // Send request
     try {
-        const name = req.query.name; 
-        const book = req.query.book;
-        const message = `Hello ${name}, ${book} book is now reserved for you.`;
-        res.status(200).send({ message });  
+        const reserved = books.find((el) => el.name.toLowerCase() === req.query.book.toLocaleLowerCase())?.reserved;        
+        if (reserved !== undefined) res.status(200).send({ reserved });
+        else {
+            const error = "Book not found";
+            res.status(404).send({ error })
+        }
     } catch (error) {
         throw(error); 
     }
