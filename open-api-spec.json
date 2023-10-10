@@ -42,8 +42,8 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "message": {
-                      "type": "string"
+                    "reserved": {
+                      "type": "boolean"
                     }
                   }
                 }
