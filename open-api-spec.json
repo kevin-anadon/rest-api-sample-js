@@ -15,8 +15,8 @@
       "description": "Local Server"
     },
     {
-      "url": "https://isoler-desem-api.11ibh4wwvyt2.us-south.codeengine.appdomain.cloud",
-      "description": "IBM Code Engine Deployment"
+      "url": "https://desem-demo.18dbmle40yqq.br-sao.codeengine.appdomain.cloud",
+      "description": "IBM Code Engine Deployment DESEM"
     }
   ],
   "paths": {
