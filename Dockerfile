@@ -4,7 +4,7 @@
 
 # Import NodeJS image
 # For mac, add in from: --platform=linux/amd64
-FROM  node:current-alpine as build
+FROM node:current-alpine as build
 
 # Create app directory
 WORKDIR /usr/src/app
