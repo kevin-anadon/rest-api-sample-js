@@ -49,12 +49,12 @@ Displays:
 ```json
 {
   "name": "Ficciones",
-    "author": "Jorge Luis Borges",
-    "genre": [
-        "Ficción",
-        "Cuentos"
-    ],
-    "reserved": true
+  "author": "Jorge Luis Borges",
+  "genre": [
+    "Ficción",
+    "Cuentos"
+  ],
+  "reserved": true
 }
 ```
 
