@@ -2,6 +2,8 @@
 
 - [API Sample JS](#api-sample-js)
   - [About the App](#about-the-app)
+  - [Examples](#examples)
+    - [Available Books](#available-books)
   - [Repository Structure](#repository-structure)
   - [Environment variables](#environment-variables)
 
@@ -10,13 +12,13 @@
 Application routes are:
 
 - `/`. Landing page.
-- `/reserve?name=NAME&book=BOOK_NAME`. Displays reserve status.
-- `/author?book=BOOK_NAME`. Displays book author.
-- `/book?book=BOOK_NAME`. Displays book info.
+- `/reserve`. Displays reserve status.
+- `/author`. Displays book author.
+- `/book`. Displays book info.
 
 ## Examples
 
-- `/reserve`
+- GET `/reserve?name=NAME&book=BOOK_NAME`
 ```
 http://localhost:8080/reserve?book=Ficciones
 ```
@@ -28,7 +30,7 @@ Displays:
 }
 ```
 
-- `/author`
+- GET `/author?book=BOOK_NAME`
 ```
 http://localhost:8080/author?book=Ficciones
 ```
@@ -40,7 +42,7 @@ Displays:
 }
 ```
 
-- `/book`
+- GET `/book?book=BOOK_NAME`
 ```
 http://localhost:8080/book?book=Ficciones
 ```
@@ -62,6 +64,34 @@ En caso de error:
 ```json
 {
     "error": "Book not found"
+}
+```
+
+- POST `/book`
+```
+http://localhost:8080/book
+```
+
+Body of the request: 
+```json
+{
+  "name": string,
+  "author": string,
+  "genre": [string]
+}
+```
+
+Displays: 
+```json
+{
+  "message": "Book has been succesfully inserted"
+}
+```
+
+En caso de error: 
+```json
+{
+    "error": "Missing book info"
 }
 ```
 
