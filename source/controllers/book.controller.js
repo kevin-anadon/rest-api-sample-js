@@ -31,7 +31,6 @@ const insert_book = async (req = request, res = response) => {
             // fs.writeFileSync(path.resolve(__dirname,"../database/books.json"), JSON.stringify(newBook))
             const books = await get_books()
             fs.readFile(path.resolve(__dirname,"../database/books.json"), (err, data) => {
-                console.log(books);
                 books.push(newBook)
                 fs.writeFileSync(path.resolve(__dirname,"../database/books.json"), JSON.stringify(books))
                 const msg = 'Book has been succesfully inserted'
