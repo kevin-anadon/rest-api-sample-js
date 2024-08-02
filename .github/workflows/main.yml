@@ -19,7 +19,7 @@ jobs:
       with:
         api-key: ${{ secrets.IBM_IAM_API_KEY }}
         resource-group: 'build-lab-latam'
-        region: 'us-east'
+        region: 'us-south'
         project: 'kanadon-toolchaintest'
         component: 'app'
         name: 'github-action-test'
