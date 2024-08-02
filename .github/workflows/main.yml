@@ -18,7 +18,7 @@ jobs:
       uses: IBM/code-engine-github-action@v1
       with:
         api-key: ${{ secrets.IBM_IAM_API_KEY }}
-        resource-group: 'build-lab-latam'
+        resource-group: 'kanadon'
         region: 'us-south'
         project: 'kanadon-toolchaintest'
         component: 'app'
